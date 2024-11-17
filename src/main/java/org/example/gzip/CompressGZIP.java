@@ -1,4 +1,4 @@
-package org.example;
+package org.example.gzip;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -8,9 +8,9 @@ import java.util.zip.GZIPOutputStream;
 public class CompressGZIP
 {
     static final String OUTPUT_FILE
-            = "/Users/egortanachev/Documents/GitHub/customZip/compress.gz";
+            = "/Users/egortanachev/Documents/GitHub/customZip/dataGZIP.gz";
     static final String INPUT_FILE
-            = "/Users/egortanachev/Documents/GitHub/customZip/compress.java";
+            = "/Users/egortanachev/Documents/GitHub/customZip/dataGZIP.java";
 
     static void compress()
     {
