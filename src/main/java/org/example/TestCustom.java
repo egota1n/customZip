@@ -7,7 +7,6 @@ import java.io.File;
 import java.io.IOException;
 
 public class TestCustom {
-
     public static void main(String[] args) {
         String inputFile = "/Users/egortanachev/Documents/GitHub/customZip/data/input10.txt";
         String compressedFile = "/Users/egortanachev/Documents/GitHub/customZip/data/compress/dataStandart.bz2";

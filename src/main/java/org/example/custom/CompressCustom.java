@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class CompressCustom {
-
     // BWT
     public static String bwt(String input) {
         int n = input.length();
