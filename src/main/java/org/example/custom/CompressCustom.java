@@ -6,7 +6,7 @@ import java.util.Collections;
 
 public class CompressCustom {
 
-    // Burrows-Wheeler Transform
+    // BWT
     public static String bwt(String input) {
         int n = input.length();
         ArrayList<String> rotations = new ArrayList<>();
@@ -21,7 +21,7 @@ public class CompressCustom {
         return result.toString();
     }
 
-    // Move-to-Front Encoding
+    // MTF
     public static int[] mtf(String input) {
         ArrayList<Character> alphabet = new ArrayList<>();
         for (char c = 0; c < 256; c++) {
@@ -38,7 +38,7 @@ public class CompressCustom {
         return result;
     }
 
-    // Run-Length Encoding
+    // RLE
     public static void rle(int[] input, FileOutputStream fos) throws IOException {
         int count = 1;
         for (int i = 1; i < input.length; i++) {
@@ -62,13 +62,13 @@ public class CompressCustom {
             byte[] inputData = fis.readAllBytes();
             String inputString = new String(inputData);
 
-            // Добавляем символ конца строки '$' для BWT
+            // BWT
             String bwtResult = bwt(inputString + "$");
 
-            // Применяем MTF
+            // MTF
             int[] mtfResult = mtf(bwtResult);
 
-            // Применяем RLE
+            // RLE
             rle(mtfResult, fos);
         }
     }
