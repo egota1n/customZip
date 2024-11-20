@@ -9,8 +9,8 @@ import java.io.IOException;
 public class TestLZW {
     public static void main(String[] args) {
         String inputFile = "/Users/egortanachev/Documents/GitHub/customZip/data/input1000.txt";
-        String compressedFile = "/Users/egortanachev/Documents/GitHub/customZip/data/compress/dataStandart.lzw";
-        String decompressedFile = "/Users/egortanachev/Documents/GitHub/customZip/data/decompress/dataStandart.txt";
+        String compressedFile = "/Users/egortanachev/Documents/GitHub/customZip/data/compress/dataLZW.lzw";
+        String decompressedFile = "/Users/egortanachev/Documents/GitHub/customZip/data/decompress/dataLZW.txt";
 
         try {
             long startCompressionTime = System.nanoTime();
